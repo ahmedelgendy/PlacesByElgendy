@@ -35,7 +35,10 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="1Qw-Al-fZq"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <state key="normal" title="Ara"/>
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="ThV-hE-xPf"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
