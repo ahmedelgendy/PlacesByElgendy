@@ -9,14 +9,17 @@
 import UIKit
 
 extension UIColor {
-    @nonobjc class var backgroundColor: UIColor {
+    @nonobjc class var viewBackground: UIColor {
         return UIColor(white: 238.0 / 255.0, alpha: 1.0)
     }
-    @nonobjc class var buttonColor: UIColor {
+    @nonobjc class var buttonBackground: UIColor {
         return UIColor(red: 0.0, green: 122.0 / 255.0, blue: 1.0, alpha: 1.0)
     }
     
-    @nonobjc class var buttonBorderColor: UIColor {
+    @nonobjc class var buttonBorder: UIColor {
+        return UIColor(white: 155.0 / 255.0, alpha: 1.0)
+    }
+    @nonobjc class var textFieldPlaceholder: UIColor {
         return UIColor(white: 155.0 / 255.0, alpha: 1.0)
     }
 }

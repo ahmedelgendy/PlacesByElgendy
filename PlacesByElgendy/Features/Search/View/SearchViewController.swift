@@ -25,20 +25,20 @@ extension SearchViewController {
     private func setupUI() {
         // TODO: custom title font type ans size
         title = "Anasyafa" //TODO: localize
-        view.backgroundColor = .backgroundColor
+        view.backgroundColor = .viewBackground
         setupSearchTextField()
         setupSearchButton()
     }
     
     private func setupSearchTextField() {
         searchTextField.placeholder = "şehir giriniz" //TODO: localize
-        searchTextField.layer.borderColor = UIColor.buttonBorderColor.cgColor
+        searchTextField.layer.borderColor = UIColor.buttonBorder.cgColor
         searchTextField.layer.borderWidth = 1
         searchTextField.layer.cornerRadius = 5
         searchTextField.backgroundColor = .white
         searchTextField.clipsToBounds = true
         //TODO: localize
-        let placeholder = NSAttributedString(string: "Şehir giriniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.buttonBorderColor])
+        let placeholder = NSAttributedString(string: "Şehir giriniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.textFieldPlaceholder])
         searchTextField.attributedPlaceholder = placeholder
         
         searchTextField.addShadow()
@@ -46,7 +46,7 @@ extension SearchViewController {
     
     private func setupSearchButton() {
         searchButton.setTitle(title: "Ara") //TODO: localize
-        searchButton.backgroundColor = .buttonColor
+        searchButton.backgroundColor = .buttonBackground
         searchButton.tintColor = .white
         searchButton.layer.cornerRadius = 8
         searchButton.clipsToBounds = true
