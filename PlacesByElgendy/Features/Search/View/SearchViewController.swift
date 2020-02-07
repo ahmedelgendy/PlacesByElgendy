@@ -19,10 +19,10 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-//        let city = searchTextField.text
-//        let viewModel = PlacesViewModel(city: city)
-//        let placesViewController = PlacesViewController(viewModel: viewModel)
-//        navigationController?.pushViewController(placesViewController, animated: true)
+        let city = searchTextField.text
+        let viewModel = PlacesViewModel(city: city)
+        let placesViewController = PlacesViewController(viewModel: viewModel)
+        navigationController?.pushViewController(placesViewController, animated: true)
     }
     
 
