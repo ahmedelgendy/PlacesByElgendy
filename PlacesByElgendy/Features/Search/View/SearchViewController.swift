@@ -1,0 +1,55 @@
+//
+//  SearchViewController.swift
+//  PlacesByElgendy
+//
+//  Created by Elgendy on 7.02.2020.
+//  Copyright © 2020 Elgendy. All rights reserved.
+//
+
+import UIKit
+
+class SearchViewController: UIViewController {
+
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+
+}
+
+// MARK: - UI Setup
+extension SearchViewController {
+    private func setupUI() {
+        // TODO: custom title font type ans size
+        title = "Anasyafa" //TODO: localize
+        view.backgroundColor = .backgroundColor
+        setupSearchTextField()
+        setupSearchButton()
+    }
+    
+    private func setupSearchTextField() {
+        searchTextField.placeholder = "şehir giriniz" //TODO: localize
+        searchTextField.layer.borderColor = UIColor.buttonBorderColor.cgColor
+        searchTextField.layer.borderWidth = 1
+        searchTextField.layer.cornerRadius = 5
+        searchTextField.backgroundColor = .white
+        searchTextField.clipsToBounds = true
+        //TODO: localize
+        let placeholder = NSAttributedString(string: "Şehir giriniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.buttonBorderColor])
+        searchTextField.attributedPlaceholder = placeholder
+        
+        searchTextField.addShadow()
+    }
+    
+    private func setupSearchButton() {
+        searchButton.setTitle(title: "Ara") //TODO: localize
+        searchButton.backgroundColor = .buttonColor
+        searchButton.tintColor = .white
+        searchButton.layer.cornerRadius = 8
+        searchButton.clipsToBounds = true
+    }
+}
+
