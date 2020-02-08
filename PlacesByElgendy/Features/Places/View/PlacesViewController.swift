@@ -10,11 +10,11 @@ import UIKit
 
 class PlacesViewController: UIViewController, AlertDisplayer {
     
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: PlacesViewModel!
+    private let cellIdentifier = "PlacesTableViewCell"
     
     init(viewModel: PlacesViewModel) {
         self.viewModel = viewModel
@@ -27,24 +27,35 @@ class PlacesViewController: UIViewController, AlertDisplayer {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Mekanlar"
+        setupUI()
         viewModel.delegate = self
-        activityIndicator.hidesWhenStopped = true
-        tableView.isHidden = true
-        
-        let nibName = UINib(nibName: "PlacesTableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier:  "PlacesTableViewCell")
-        tableView.prefetchDataSource = self
-        activityIndicator.startAnimating()
         viewModel.fetchPlaces()
-        
     }
-    
-    
 }
 
-// MARK: - UITableViewDelegate Methods
+// MARK: - setup UI
+extension PlacesViewController {
+    func setupUI() {
+        title = "Mekanlar"
+        setupTableView()
+        setupActivityIdicator()
+    }
+    
+    func setupActivityIdicator() {
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
+    }
+    
+    func setupTableView() {
+        let nibName = UINib(nibName: cellIdentifier, bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: cellIdentifier)
+        tableView.prefetchDataSource = self
+        tableView.isHidden = true
+    }
+}
 
+
+// MARK: - UITableViewDelegate Methods
 extension PlacesViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +63,7 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlacesTableViewCell") as? PlacesTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? PlacesTableViewCell else {
             return UITableViewCell()
         }
         if isLoadingCell(for: indexPath) {
@@ -69,9 +80,17 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource, UITa
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsViewController = PlaceDetailsViewController()
+        detailsViewController.modalPresentationStyle = .overCurrentContext
+        detailsViewController.modalTransitionStyle = .crossDissolve
+        present(detailsViewController, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
-
+// MARK: - PlacesViewModelDelegate
 extension PlacesViewController: PlacesViewModelDelegate {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
         guard let newIndexPathsToReload = newIndexPathsToReload else {
@@ -92,10 +111,9 @@ extension PlacesViewController: PlacesViewModelDelegate {
     }
 }
 
-
-
-
+// MARK: - Helper methods
 private extension PlacesViewController {
+    
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
         return indexPath.row >= viewModel.numberOfItems()
     }

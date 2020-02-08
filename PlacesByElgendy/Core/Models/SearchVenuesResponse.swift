@@ -31,7 +31,7 @@ struct Response: Codable {
     let suggestedFilters: SuggestedFilters?
     let geocode: Geocode?
     let headerLocation, headerFullLocation, headerLocationGranularity: String?
-    let totalResults: Int
+    let totalResults: Int?
     let suggestedBounds: Bounds?
     let groups: [Group]?
 }
