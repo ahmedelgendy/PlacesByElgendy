@@ -16,6 +16,8 @@
 		AF3DE16923EDA89D00474093 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DE16823EDA89D00474093 /* PlacesViewModel.swift */; };
 		AF59324E23ED993000A25C34 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59324D23ED993000A25C34 /* UIColor.swift */; };
 		AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0323EEC1960014DE4C /* AlertDisplay.swift */; };
+		AF799E0B23EECFF10014DE4C /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0923EECFF10014DE4C /* PlaceDetailsViewController.swift */; };
+		AF799E0C23EECFF10014DE4C /* PlaceDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF799E0A23EECFF10014DE4C /* PlaceDetailsViewController.xib */; };
 		AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A13823ECB4A600748C47 /* AppDelegate.swift */; };
 		AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6A14123ECB4AB00748C47 /* Assets.xcassets */; };
 		AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A14C23ECB80F00748C47 /* AppStarter.swift */; };
@@ -41,6 +43,8 @@
 		AF3DE16823EDA89D00474093 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		AF59324D23ED993000A25C34 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		AF799E0323EEC1960014DE4C /* AlertDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplay.swift; sourceTree = "<group>"; };
+		AF799E0923EECFF10014DE4C /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		AF799E0A23EECFF10014DE4C /* PlaceDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailsViewController.xib; sourceTree = "<group>"; };
 		AFB6A13523ECB4A600748C47 /* PlacesByElgendy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesByElgendy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6A13823ECB4A600748C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PlacesByElgendy/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		AFB6A14123ECB4AB00748C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +144,15 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		AF799E0823EECFD50014DE4C /* Place Details */ = {
+			isa = PBXGroup;
+			children = (
+				AF799E0923EECFF10014DE4C /* PlaceDetailsViewController.swift */,
+				AF799E0A23EECFF10014DE4C /* PlaceDetailsViewController.xib */,
+			);
+			path = "Place Details";
+			sourceTree = "<group>";
+		};
 		AFB6A12C23ECB4A600748C47 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 		AFD735A723ED82FC00A05DD9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				AF799E0823EECFD50014DE4C /* Place Details */,
 				AF3DE16123EDA85700474093 /* Places */,
 				AFD735AA23ED838E00A05DD9 /* Search */,
 			);
@@ -294,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3DE16523EDA87B00474093 /* PlacesViewController.xib in Resources */,
+				AF799E0C23EECFF10014DE4C /* PlaceDetailsViewController.xib in Resources */,
 				AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */,
 				AFB6A14F23ECB91200748C47 /* LaunchScreen.storyboard in Resources */,
 				AFD735AE23ED83A500A05DD9 /* SearchViewController.xib in Resources */,
@@ -314,6 +329,7 @@
 				AF3DE16923EDA89D00474093 /* PlacesViewModel.swift in Sources */,
 				AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */,
 				AFD735AD23ED83A500A05DD9 /* SearchViewController.swift in Sources */,
+				AF799E0B23EECFF10014DE4C /* PlaceDetailsViewController.swift in Sources */,
 				AFD735A423ED655200A05DD9 /* AppContext.swift in Sources */,
 				AFD7359F23ED61D000A05DD9 /* AppConstants.swift in Sources */,
 				AFD7359A23ED61A600A05DD9 /* FourSquareProvider.swift in Sources */,
