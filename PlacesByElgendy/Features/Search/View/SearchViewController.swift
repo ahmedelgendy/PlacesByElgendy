@@ -19,15 +19,12 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-        var cityParam = "Istanbul"
-        if let city = searchTextField.text, !city.isEmpty {
-            cityParam = city
-        }
-        let fourSquareProvider = FourSquareProvider(network: Networking())
-        let viewModel = PlacesViewModel(city: cityParam, provider: fourSquareProvider)
-        let placesViewController = PlacesViewController(viewModel: viewModel)
-        navigationController?.pushViewController(placesViewController, animated: true)
+//        let city = searchTextField.text
+//        let viewModel = PlacesViewModel(city: city)
+//        let placesViewController = PlacesViewController(viewModel: viewModel)
+//        navigationController?.pushViewController(placesViewController, animated: true)
     }
+    
 
 }
 
