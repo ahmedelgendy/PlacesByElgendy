@@ -19,7 +19,9 @@ final class AppStarter {
     }
 
     private func setRootViewController(window: UIWindow?) {
-        let vc = SearchViewController()
+        let vc = UIViewController()
+        vc.view.backgroundColor = .white
+        vc.title = "VC"
         let rootViewController = UINavigationController(rootViewController: vc)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
