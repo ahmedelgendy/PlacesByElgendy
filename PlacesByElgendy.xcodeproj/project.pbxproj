@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF15D27323EE03AF003157DF /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15D27123EE03AF003157DF /* PlacesTableViewCell.swift */; };
+		AF15D27423EE03AF003157DF /* PlacesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF15D27223EE03AF003157DF /* PlacesTableViewCell.xib */; };
 		AF3DE15E23ED9DA800474093 /* UIButton+setTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DE15D23ED9DA800474093 /* UIButton+setTitle.swift */; };
 		AF3DE16023EDA18700474093 /* UIView+addShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DE15F23EDA18700474093 /* UIView+addShadow.swift */; };
 		AF3DE16423EDA87B00474093 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DE16223EDA87B00474093 /* PlacesViewController.swift */; };
 		AF3DE16523EDA87B00474093 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DE16323EDA87B00474093 /* PlacesViewController.xib */; };
 		AF3DE16923EDA89D00474093 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DE16823EDA89D00474093 /* PlacesViewModel.swift */; };
-		AF59324B23ED854A00A25C34 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59324A23ED854A00A25C34 /* SearchViewModel.swift */; };
 		AF59324E23ED993000A25C34 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59324D23ED993000A25C34 /* UIColor.swift */; };
+		AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0323EEC1960014DE4C /* AlertDisplay.swift */; };
 		AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A13823ECB4A600748C47 /* AppDelegate.swift */; };
 		AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6A14123ECB4AB00748C47 /* Assets.xcassets */; };
 		AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A14C23ECB80F00748C47 /* AppStarter.swift */; };
@@ -30,13 +32,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF15D27123EE03AF003157DF /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		AF15D27223EE03AF003157DF /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
 		AF3DE15D23ED9DA800474093 /* UIButton+setTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setTitle.swift"; sourceTree = "<group>"; };
 		AF3DE15F23EDA18700474093 /* UIView+addShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addShadow.swift"; sourceTree = "<group>"; };
 		AF3DE16223EDA87B00474093 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		AF3DE16323EDA87B00474093 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
 		AF3DE16823EDA89D00474093 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
-		AF59324A23ED854A00A25C34 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		AF59324D23ED993000A25C34 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AF799E0323EEC1960014DE4C /* AlertDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplay.swift; sourceTree = "<group>"; };
 		AFB6A13523ECB4A600748C47 /* PlacesByElgendy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesByElgendy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6A13823ECB4A600748C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PlacesByElgendy/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		AFB6A14123ECB4AB00748C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,11 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF15D26E23EE0350003157DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AF15D27123EE03AF003157DF /* PlacesTableViewCell.swift */,
+				AF15D27223EE03AF003157DF /* PlacesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		AF3DE16123EDA85700474093 /* Places */ = {
 			isa = PBXGroup;
 			children = (
 				AF3DE16623EDA87F00474093 /* View */,
 				AF3DE16723EDA88B00474093 /* ViewModel */,
+				AF15D26E23EE0350003157DF /* Cell */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -102,18 +116,10 @@
 		AF59324823ED851600A25C34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AFD735AC23ED83A500A05DD9 /* SearchViewController.xib */,
 				AFD735AB23ED83A500A05DD9 /* SearchViewController.swift */,
+				AFD735AC23ED83A500A05DD9 /* SearchViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		AF59324923ED852800A25C34 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AF59324A23ED854A00A25C34 /* SearchViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AF59324C23ED990300A25C34 /* Extensions */ = {
@@ -124,6 +130,14 @@
 				AF3DE15F23EDA18700474093 /* UIView+addShadow.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF799E0223EEC1710014DE4C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF799E0323EEC1960014DE4C /* AlertDisplay.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		AFB6A12C23ECB4A600748C47 = {
@@ -146,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				AFD7359D23ED61C500A05DD9 /* App */,
+				AF799E0223EEC1710014DE4C /* Shared */,
 				AFD7359023ED619A00A05DD9 /* Core */,
 				AFD735A723ED82FC00A05DD9 /* Features */,
 				AF59324C23ED990300A25C34 /* Extensions */,
@@ -216,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				AF59324823ED851600A25C34 /* View */,
-				AF59324923ED852800A25C34 /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -283,6 +297,7 @@
 				AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */,
 				AFB6A14F23ECB91200748C47 /* LaunchScreen.storyboard in Resources */,
 				AFD735AE23ED83A500A05DD9 /* SearchViewController.xib in Resources */,
+				AF15D27423EE03AF003157DF /* PlacesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +309,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3DE16023EDA18700474093 /* UIView+addShadow.swift in Sources */,
-				AF59324B23ED854A00A25C34 /* SearchViewModel.swift in Sources */,
 				AF59324E23ED993000A25C34 /* UIColor.swift in Sources */,
 				AFD735A223ED64C200A05DD9 /* SearchVenuesResponse.swift in Sources */,
 				AF3DE16923EDA89D00474093 /* PlacesViewModel.swift in Sources */,
+				AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */,
 				AFD735AD23ED83A500A05DD9 /* SearchViewController.swift in Sources */,
 				AFD735A423ED655200A05DD9 /* AppContext.swift in Sources */,
 				AFD7359F23ED61D000A05DD9 /* AppConstants.swift in Sources */,
@@ -306,6 +321,7 @@
 				AFD7359C23ED61A600A05DD9 /* FourSquareEndpoint.swift in Sources */,
 				AFD7359823ED61A600A05DD9 /* Environment.swift in Sources */,
 				AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */,
+				AF15D27323EE03AF003157DF /* PlacesTableViewCell.swift in Sources */,
 				AF3DE16423EDA87B00474093 /* PlacesViewController.swift in Sources */,
 				AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */,
 				AFD7359B23ED61A600A05DD9 /* Networking.swift in Sources */,
@@ -365,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -419,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

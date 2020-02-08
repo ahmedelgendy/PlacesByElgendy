@@ -21,4 +21,7 @@ extension UIColor {
     @nonobjc class var textFieldPlaceholder: UIColor {
         return UIColor(white: 155.0 / 255.0, alpha: 1.0)
     }
+    @nonobjc class var placesCellLabel: UIColor {
+      return UIColor(red: 70.0 / 255.0, green: 79.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
+    }
 }

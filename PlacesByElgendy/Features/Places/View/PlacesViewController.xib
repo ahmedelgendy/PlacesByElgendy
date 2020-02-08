@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesViewController" customModule="PlacesByElgendy" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="g2e-vv-Tue" id="cW1-hL-zec"/>
+                <outlet property="tableView" destination="dVt-2D-Rgl" id="8Tz-dJ-S0F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,14 +22,23 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dVt-2D-Rgl">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Bsr-jT-Gwq"/>
+                        <outlet property="delegate" destination="-1" id="Rkt-C8-OME"/>
+                    </connections>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g2e-vv-Tue">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="dVt-2D-Rgl" secondAttribute="bottom" id="Fdc-AG-tt8"/>
                 <constraint firstAttribute="trailing" secondItem="dVt-2D-Rgl" secondAttribute="trailing" id="M43-j2-9r5"/>
                 <constraint firstItem="dVt-2D-Rgl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iSv-lA-txC"/>
+                <constraint firstItem="g2e-vv-Tue" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jQh-w2-d9O"/>
                 <constraint firstItem="dVt-2D-Rgl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rmr-5m-YNw"/>
+                <constraint firstItem="g2e-vv-Tue" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tTS-sn-jR2"/>
             </constraints>
             <point key="canvasLocation" x="129" y="123"/>
         </view>
