@@ -51,13 +51,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF15D26E23EE0350003157DF /* Cell */ = {
+		AF59324723ED846F00A25C34 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AF15D27123EE03AF003157DF /* PlacesTableViewCell.swift */,
-				AF15D27223EE03AF003157DF /* PlacesTableViewCell.xib */,
+				AFB6A14123ECB4AB00748C47 /* Assets.xcassets */,
 			);
-			path = Cell;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AFB6A12C23ECB4A600748C47 = {
@@ -80,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				AFD7359D23ED61C500A05DD9 /* App */,
-				AF799E0223EEC1710014DE4C /* Shared */,
 				AFD7359023ED619A00A05DD9 /* Core */,
 				AFD735A723ED82FC00A05DD9 /* Features */,
 				AF59324723ED846F00A25C34 /* Resources */,
@@ -140,7 +138,6 @@
 		AFD735A723ED82FC00A05DD9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				AF3DE16123EDA85700474093 /* Places */,
 				AFD735AA23ED838E00A05DD9 /* Search */,
 			);
 			path = Features;
@@ -213,11 +210,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3DE16523EDA87B00474093 /* PlacesViewController.xib in Resources */,
 				AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */,
 				AFB6A14F23ECB91200748C47 /* LaunchScreen.storyboard in Resources */,
 				AFD735AE23ED83A500A05DD9 /* SearchViewController.xib in Resources */,
-				AF15D27423EE03AF003157DF /* PlacesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD735A223ED64C200A05DD9 /* SearchVenuesResponse.swift in Sources */,
-				AF3DE16923EDA89D00474093 /* PlacesViewModel.swift in Sources */,
-				AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */,
 				AFD735AD23ED83A500A05DD9 /* SearchViewController.swift in Sources */,
 				AFD735A423ED655200A05DD9 /* AppContext.swift in Sources */,
 				AFD7359F23ED61D000A05DD9 /* AppConstants.swift in Sources */,
@@ -238,8 +231,6 @@
 				AFD7359C23ED61A600A05DD9 /* FourSquareEndpoint.swift in Sources */,
 				AFD7359823ED61A600A05DD9 /* Environment.swift in Sources */,
 				AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */,
-				AF15D27323EE03AF003157DF /* PlacesTableViewCell.swift in Sources */,
-				AF3DE16423EDA87B00474093 /* PlacesViewController.swift in Sources */,
 				AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */,
 				AFD7359B23ED61A600A05DD9 /* Networking.swift in Sources */,
 			);
@@ -298,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
