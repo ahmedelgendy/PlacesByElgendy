@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 /// AppStarter here you can handle everything before letting your app starts
 final class AppStarter {
@@ -16,6 +17,7 @@ final class AppStarter {
     
     func start(window: UIWindow?) {
         setRootViewController(window: window)
+        setupKeyboardManager()
     }
 
     private func setRootViewController(window: UIWindow?) {
@@ -23,5 +25,10 @@ final class AppStarter {
         let rootViewController = UINavigationController(rootViewController: vc)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+    }
+    
+    private func setupKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
 }

@@ -55,7 +55,7 @@ class PlacesViewModel {
                 print("total: ", value.response.totalResults)
                 self.venues.append(contentsOf: newVenues)
                 self.searchParameters.offset += newVenues.count
-                self.totalItemsCount = value.response.totalResults
+                self.totalItemsCount = value.response.totalResults ?? 0
                 self.isFetchInProgress = false
                 if self.searchParameters.offset > self.searchParameters.limit {
                     let indexPathsToReload = self.calculateIndexPathsToReload(from: newVenues)

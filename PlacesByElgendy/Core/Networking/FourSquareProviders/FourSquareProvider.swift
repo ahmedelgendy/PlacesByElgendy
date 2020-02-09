@@ -25,4 +25,9 @@ struct FourSquareProvider: FourSquareProviding {
         let endpoint = FourSquareEndpoint.searchVenues(params: params)
         network.execute(endpoint, completion: completion)
     }
+    
+    func venueDetails(venueId: String, _ completion: @escaping (Result<VenueDetailsResponse, Error>) -> Void) {
+        let endpoint = FourSquareEndpoint.venueDetails(venueId: venueId)
+        network.execute(endpoint, completion: completion)
+    }
 }

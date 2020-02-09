@@ -31,7 +31,7 @@ struct Response: Codable {
     let suggestedFilters: SuggestedFilters?
     let geocode: Geocode?
     let headerLocation, headerFullLocation, headerLocationGranularity: String?
-    let totalResults: Int
+    let totalResults: Int?
     let suggestedBounds: Bounds?
     let groups: [Group]?
 }
@@ -101,7 +101,7 @@ struct ReasonsItem: Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let id, name: String?
+    let id, name: String
     let location: Location?
     let categories: [Category]?
     let photos: Photos?
