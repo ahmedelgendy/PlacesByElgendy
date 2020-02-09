@@ -28,10 +28,7 @@ class PlaceDetailsViewController: UIViewController, AlertDisplayer {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageView.kf.indicatorType = .activity
-        imageView.kf.indicator?.startAnimatingView()
-
+        setupUI()
         viewModel.delegate = self
         viewModel.fetchPlaceDetails()
     }
@@ -47,9 +44,19 @@ class PlaceDetailsViewController: UIViewController, AlertDisplayer {
 // MARK: - UI Methods
 extension PlaceDetailsViewController {
 
+    func setupUI() {
+        setupImageView()
+    }
+    
+    func setupImageView() {
+        imageView.kf.indicatorType = .activity
+        imageView.kf.indicator?.startAnimatingView()
+    }
+    
     func setImageView(with urlString: String) {
         imageView.kf.indicator?.stopAnimatingView()
-        imageView.kf.setImage(with: URL(string: urlString), options: [.transition(.fade(0.5))])
+        imageView.kf.setImage(with: URL(string: urlString),
+                              options: [.transition(.fade(0.5))])
     }
     
     func setupMap(lat: Double, lng: Double) {
@@ -64,7 +71,9 @@ extension PlaceDetailsViewController {
         return annotation
     }
     
-    func setMapRegion(for coordinate: CLLocationCoordinate2D, latitudinalMeters: Double = 1000, longitudinalMeters: Double = 1000) {
+    func setMapRegion(for coordinate: CLLocationCoordinate2D,
+                      latitudinalMeters: Double = 1000,
+                      longitudinalMeters: Double = 1000) {
         let viewRegion = MKCoordinateRegion(center: coordinate,
                                             latitudinalMeters: latitudinalMeters,
                                             longitudinalMeters: longitudinalMeters)
