@@ -38,6 +38,8 @@ class PlaceDetailsViewModel {
                         self.delegate?.onFetchCompleted(latitude: venue.location.lat,
                                                         longitude: venue.location.lng,
                                                         imageUrl: imageUrl)
+                    } else {
+                        self.delegate?.onFetchFailure(reason: "Data could not be fetched")
                     }
                 }
             case .failure(let error):

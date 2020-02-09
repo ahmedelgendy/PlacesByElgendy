@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceDetailsViewController" customModule="PlacesByElgendy" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="7p1-QS-wf7" id="SGB-bT-Fon"/>
                 <outlet property="imageView" destination="U13-nC-eRe" id="pYM-2N-Aoi"/>
                 <outlet property="mapView" destination="xZ8-pv-kPh" id="fwx-UK-Aov"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,6 +30,13 @@
                             <rect key="frame" x="0.0" y="269" width="331" height="269"/>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7p1-QS-wf7">
+                            <rect key="frame" x="155.5" y="393" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="LbG-Al-iTO"/>
+                                <constraint firstAttribute="height" constant="20" id="ab2-KM-rxS"/>
+                            </constraints>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -40,6 +48,8 @@
                         <constraint firstItem="xZ8-pv-kPh" firstAttribute="top" secondItem="OCb-7I-UWL" secondAttribute="top" id="fS0-a5-G9u"/>
                         <constraint firstAttribute="trailing" secondItem="xZ8-pv-kPh" secondAttribute="trailing" id="fUw-Z4-yJQ"/>
                         <constraint firstItem="xZ8-pv-kPh" firstAttribute="height" secondItem="OCb-7I-UWL" secondAttribute="height" multiplier="0.5" id="nGY-tt-Zqs"/>
+                        <constraint firstItem="7p1-QS-wf7" firstAttribute="centerX" secondItem="OCb-7I-UWL" secondAttribute="centerX" id="s4w-Y1-hdd"/>
+                        <constraint firstItem="U13-nC-eRe" firstAttribute="top" secondItem="7p1-QS-wf7" secondAttribute="bottom" constant="-144" id="wJq-LL-NRT"/>
                     </constraints>
                 </view>
             </subviews>

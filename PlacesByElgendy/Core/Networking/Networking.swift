@@ -23,11 +23,9 @@ public struct Networking: NetworkingProtocol {
                     completion(.failure(error))
                     return
                 }
-                
                 guard let data = data else {
                     preconditionFailure("No Errors, but no data also!")
                 }
-                
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
 //                print("Before decoding: \n", String(data: data, encoding: .utf8))
@@ -38,7 +36,6 @@ public struct Networking: NetworkingProtocol {
                 completion(.failure(error))
             }
         }
-        
         task.resume()
     }
 }

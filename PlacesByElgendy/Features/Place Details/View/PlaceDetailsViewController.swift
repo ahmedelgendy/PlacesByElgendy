@@ -14,6 +14,7 @@ class PlaceDetailsViewController: UIViewController, AlertDisplayer {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var viewModel: PlaceDetailsViewModel
     
@@ -45,21 +46,14 @@ class PlaceDetailsViewController: UIViewController, AlertDisplayer {
 extension PlaceDetailsViewController {
 
     func setupUI() {
-        setupImageView()
-    }
-    
-    func setupImageView() {
-//        imageView.kf.indicatorType = .activity
-//        imageView.kf.indicator?.startAnimatingView()
+        activityIndicator.startAnimating()
     }
     
     func setImageView(with urlString: String) {
-//        imageView.kf.indicator?.stopAnimatingView()
         if let url = URL(string: urlString) {
             imageView.af_setImage(withURL: url)
         }
-//        kf.setImage(with: URL(string: urlString),
-//                              options: [.transition(.fade(0.5))])
+        activityIndicator.stopAnimating()
     }
     
     func setupMap(lat: Double, lng: Double) {
@@ -92,7 +86,10 @@ extension PlaceDetailsViewController: PlaceDetailsViewModelDelegate {
     }
     
     func onFetchFailure(reason: String) {
-        displayAlert(with: "Erro", message: reason)
+        let action = UIAlertAction(title: "Kapat", style: .default) { (_) in
+            self.dismiss(animated: true)
+        }
+        displayAlert(with: "Error", message: reason, actions: [action])
     }
     
 }
