@@ -1,0 +1,22 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.13.0):
+    - Kingfisher/Core (= 5.13.0)
+  - Kingfisher/Core (5.13.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+
+PODFILE CHECKSUM: b9ed9b242b7e1a116f97862d665c2cf57dc8a485
+
+COCOAPODS: 1.8.4

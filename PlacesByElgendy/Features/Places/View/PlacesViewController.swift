@@ -81,7 +81,10 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsViewController = PlaceDetailsViewController()
+        let provider = FourSquareProvider(network: Networking())
+        let placeId = viewModel.venue(at: indexPath.row).id
+        let detailsViewModel = PlaceDetailsViewModel(placeId: placeId, provider: provider)
+        let detailsViewController = PlaceDetailsViewController(viewModel: detailsViewModel)
         detailsViewController.modalPresentationStyle = .overCurrentContext
         detailsViewController.modalTransitionStyle = .crossDissolve
         present(detailsViewController, animated: true, completion: nil)

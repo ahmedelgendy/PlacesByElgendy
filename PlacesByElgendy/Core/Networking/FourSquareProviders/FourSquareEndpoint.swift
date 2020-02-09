@@ -12,18 +12,11 @@ public protocol RequestProviding {
     var urlRequest: URLRequest { get }
 }
 
-public struct SearchVenusParameters {
-    var near = "Istanbul"
-    var intent = "match"
-    var radius = 500
-    var limit = 20
-    var offset = 0
-}
-
 public enum FourSquareEndpoint: RequestProviding {
     
     case searchVenues(params: SearchVenusParameters)
-    
+    case venueDetails(venueId: String)
+
     public var urlRequest: URLRequest {
         var urlComponents = URLComponents()
         urlComponents.scheme = AppConstants.FourSquare.scheme
@@ -39,6 +32,9 @@ public enum FourSquareEndpoint: RequestProviding {
             urlComponents.addQuery(key: "radius", value: "\(params.radius)")
             urlComponents.addQuery(key: "limit", value: "\(params.limit)")
             urlComponents.addQuery(key: "offset", value: "\(params.offset)")
+            
+        case .venueDetails(let venueId):
+            urlComponents.path = "/v2/venues/\(venueId)"
         }
         
         return URLRequest(url: urlComponents.url!)

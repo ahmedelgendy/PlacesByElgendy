@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,9 @@
 		AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0323EEC1960014DE4C /* AlertDisplay.swift */; };
 		AF799E0B23EECFF10014DE4C /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0923EECFF10014DE4C /* PlaceDetailsViewController.swift */; };
 		AF799E0C23EECFF10014DE4C /* PlaceDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF799E0A23EECFF10014DE4C /* PlaceDetailsViewController.xib */; };
+		AF799E1023EEDE840014DE4C /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0F23EEDE840014DE4C /* PlaceDetailsViewModel.swift */; };
+		AF799E1323EEE05D0014DE4C /* SearchVenusParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E1223EEE05D0014DE4C /* SearchVenusParameters.swift */; };
+		AF799E1523EEE5760014DE4C /* VenueDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E1423EEE5760014DE4C /* VenueDetailsResponse.swift */; };
 		AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A13823ECB4A600748C47 /* AppDelegate.swift */; };
 		AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6A14123ECB4AB00748C47 /* Assets.xcassets */; };
 		AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A14C23ECB80F00748C47 /* AppStarter.swift */; };
@@ -31,9 +34,12 @@
 		AFD735A423ED655200A05DD9 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD735A323ED655100A05DD9 /* AppContext.swift */; };
 		AFD735AD23ED83A500A05DD9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD735AB23ED83A500A05DD9 /* SearchViewController.swift */; };
 		AFD735AE23ED83A500A05DD9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD735AC23ED83A500A05DD9 /* SearchViewController.xib */; };
+		DFCEDBB22F8555FDED6CD691 /* Pods_PlacesByElgendy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A342467385BC3F740B5419 /* Pods_PlacesByElgendy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23A342467385BC3F740B5419 /* Pods_PlacesByElgendy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlacesByElgendy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7850B44FBC3C3B69058FD8 /* Pods-PlacesByElgendy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesByElgendy.release.xcconfig"; path = "Target Support Files/Pods-PlacesByElgendy/Pods-PlacesByElgendy.release.xcconfig"; sourceTree = "<group>"; };
 		AF15D27123EE03AF003157DF /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewCell.swift; sourceTree = "<group>"; };
 		AF15D27223EE03AF003157DF /* PlacesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesTableViewCell.xib; sourceTree = "<group>"; };
 		AF3DE15D23ED9DA800474093 /* UIButton+setTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+setTitle.swift"; sourceTree = "<group>"; };
@@ -45,6 +51,9 @@
 		AF799E0323EEC1960014DE4C /* AlertDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplay.swift; sourceTree = "<group>"; };
 		AF799E0923EECFF10014DE4C /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		AF799E0A23EECFF10014DE4C /* PlaceDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailsViewController.xib; sourceTree = "<group>"; };
+		AF799E0F23EEDE840014DE4C /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
+		AF799E1223EEE05D0014DE4C /* SearchVenusParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVenusParameters.swift; sourceTree = "<group>"; };
+		AF799E1423EEE5760014DE4C /* VenueDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsResponse.swift; sourceTree = "<group>"; };
 		AFB6A13523ECB4A600748C47 /* PlacesByElgendy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesByElgendy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6A13823ECB4A600748C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PlacesByElgendy/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		AFB6A14123ECB4AB00748C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +69,7 @@
 		AFD735A323ED655100A05DD9 /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		AFD735AB23ED83A500A05DD9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AFD735AC23ED83A500A05DD9 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		D95FBA16588045159740DBC8 /* Pods-PlacesByElgendy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesByElgendy.debug.xcconfig"; path = "Target Support Files/Pods-PlacesByElgendy/Pods-PlacesByElgendy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFCEDBB22F8555FDED6CD691 /* Pods_PlacesByElgendy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,10 +158,35 @@
 		AF799E0823EECFD50014DE4C /* Place Details */ = {
 			isa = PBXGroup;
 			children = (
+				AF799E0D23EEDE5B0014DE4C /* View */,
+				AF799E0E23EEDE6D0014DE4C /* ViewModel */,
+			);
+			path = "Place Details";
+			sourceTree = "<group>";
+		};
+		AF799E0D23EEDE5B0014DE4C /* View */ = {
+			isa = PBXGroup;
+			children = (
 				AF799E0923EECFF10014DE4C /* PlaceDetailsViewController.swift */,
 				AF799E0A23EECFF10014DE4C /* PlaceDetailsViewController.xib */,
 			);
-			path = "Place Details";
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF799E0E23EEDE6D0014DE4C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF799E0F23EEDE840014DE4C /* PlaceDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF799E1123EEE04F0014DE4C /* Params */ = {
+			isa = PBXGroup;
+			children = (
+				AF799E1223EEE05D0014DE4C /* SearchVenusParameters.swift */,
+			);
+			path = Params;
 			sourceTree = "<group>";
 		};
 		AFB6A12C23ECB4A600748C47 = {
@@ -158,6 +194,8 @@
 			children = (
 				AFB6A13723ECB4A600748C47 /* PlacesByElgendy */,
 				AFB6A13623ECB4A600748C47 /* Products */,
+				C406AC6B1316FF62B164F42D /* Pods */,
+				E6EF175D9EA6E2D423007234 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +244,7 @@
 		AFD7359323ED61A600A05DD9 /* FourSquareProviders */ = {
 			isa = PBXGroup;
 			children = (
+				AF799E1123EEE04F0014DE4C /* Params */,
 				AFD7359723ED61A600A05DD9 /* FourSquareEndpoint.swift */,
 				AFD7359523ED61A600A05DD9 /* FourSquareProvider.swift */,
 			);
@@ -215,8 +254,8 @@
 		AFD7359D23ED61C500A05DD9 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				AFB6A13823ECB4A600748C47 /* AppDelegate.swift */,
 				AFB6A14C23ECB80F00748C47 /* AppStarter.swift */,
+				AFB6A13823ECB4A600748C47 /* AppDelegate.swift */,
 				AFD735A323ED655100A05DD9 /* AppContext.swift */,
 				AFD7359E23ED61D000A05DD9 /* AppConstants.swift */,
 			);
@@ -226,6 +265,7 @@
 		AFD735A023ED64A900A05DD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF799E1423EEE5760014DE4C /* VenueDetailsResponse.swift */,
 				AFD735A123ED64C200A05DD9 /* SearchVenuesResponse.swift */,
 			);
 			path = Models;
@@ -249,6 +289,23 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		C406AC6B1316FF62B164F42D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D95FBA16588045159740DBC8 /* Pods-PlacesByElgendy.debug.xcconfig */,
+				5A7850B44FBC3C3B69058FD8 /* Pods-PlacesByElgendy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6EF175D9EA6E2D423007234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23A342467385BC3F740B5419 /* Pods_PlacesByElgendy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFB6A14923ECB4AB00748C47 /* Build configuration list for PBXNativeTarget "PlacesByElgendy" */;
 			buildPhases = (
+				BA627048C5F9EC061AB659C2 /* [CP] Check Pods Manifest.lock */,
 				AFB6A13123ECB4A600748C47 /* Sources */,
 				AFB6A13223ECB4A600748C47 /* Frameworks */,
 				AFB6A13323ECB4A600748C47 /* Resources */,
+				33544BEC93DFAA9023CCF21B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +377,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33544BEC93DFAA9023CCF21B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlacesByElgendy/Pods-PlacesByElgendy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlacesByElgendy/Pods-PlacesByElgendy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlacesByElgendy/Pods-PlacesByElgendy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA627048C5F9EC061AB659C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlacesByElgendy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFB6A13123ECB4A600748C47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -328,6 +429,7 @@
 				AFD735A223ED64C200A05DD9 /* SearchVenuesResponse.swift in Sources */,
 				AF3DE16923EDA89D00474093 /* PlacesViewModel.swift in Sources */,
 				AF799E0423EEC1960014DE4C /* AlertDisplay.swift in Sources */,
+				AF799E1023EEDE840014DE4C /* PlaceDetailsViewModel.swift in Sources */,
 				AFD735AD23ED83A500A05DD9 /* SearchViewController.swift in Sources */,
 				AF799E0B23EECFF10014DE4C /* PlaceDetailsViewController.swift in Sources */,
 				AFD735A423ED655200A05DD9 /* AppContext.swift in Sources */,
@@ -338,7 +440,9 @@
 				AFD7359823ED61A600A05DD9 /* Environment.swift in Sources */,
 				AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */,
 				AF15D27323EE03AF003157DF /* PlacesTableViewCell.swift in Sources */,
+				AF799E1523EEE5760014DE4C /* VenueDetailsResponse.swift in Sources */,
 				AF3DE16423EDA87B00474093 /* PlacesViewController.swift in Sources */,
+				AF799E1323EEE05D0014DE4C /* SearchVenusParameters.swift in Sources */,
 				AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */,
 				AFD7359B23ED61A600A05DD9 /* Networking.swift in Sources */,
 			);
@@ -463,6 +567,7 @@
 		};
 		AFB6A14A23ECB4AB00748C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95FBA16588045159740DBC8 /* Pods-PlacesByElgendy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +586,7 @@
 		};
 		AFB6A14B23ECB4AB00748C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7850B44FBC3C3B69058FD8 /* Pods-PlacesByElgendy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

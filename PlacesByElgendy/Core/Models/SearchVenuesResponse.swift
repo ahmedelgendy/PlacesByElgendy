@@ -101,7 +101,7 @@ struct ReasonsItem: Codable {
 
 // MARK: - Venue
 struct Venue: Codable {
-    let id, name: String?
+    let id, name: String
     let location: Location?
     let categories: [Category]?
     let photos: Photos?
