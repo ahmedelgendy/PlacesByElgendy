@@ -19,6 +19,7 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
+        view.endEditing(true)
         var city = "istanbul"
         if let searchText = searchTextField.text, !searchText.isEmpty {
             city = searchText
@@ -35,33 +36,49 @@ class SearchViewController: UIViewController {
 // MARK: - UI Setup
 extension SearchViewController {
     private func setupUI() {
-        // TODO: custom title font type ans size
-        title = "Anasyafa" //TODO: localize
+        title = "Anasyafa"
         view.backgroundColor = .viewBackground
         setupSearchTextField()
         setupSearchButton()
     }
     
     private func setupSearchTextField() {
-        searchTextField.placeholder = "şehir giriniz" //TODO: localize
+        searchTextField.placeholder = "şehir giriniz"
         searchTextField.layer.borderColor = UIColor.buttonBorder.cgColor
         searchTextField.layer.borderWidth = 1
         searchTextField.layer.cornerRadius = 5
         searchTextField.backgroundColor = .white
         searchTextField.clipsToBounds = true
-        //TODO: localize
         let placeholder = NSAttributedString(string: "Şehir giriniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.textFieldPlaceholder])
         searchTextField.attributedPlaceholder = placeholder
-        
+        searchTextField.delegate = self
         searchTextField.addShadow()
     }
     
     private func setupSearchButton() {
-        searchButton.setTitle(title: "Ara") //TODO: localize
+        searchButton.setTitle(title: "Ara")
         searchButton.backgroundColor = .buttonBackground
         searchButton.tintColor = .white
         searchButton.layer.cornerRadius = 8
         searchButton.clipsToBounds = true
     }
 }
+
+// MARK: - UITextFieldDelegate
+extension SearchViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField == searchTextField {
+            if string.count > 0 {
+                var allowedCharacters = CharacterSet.letters
+                allowedCharacters.insert(charactersIn: " ")
+                let unwantedStr = string.trimmingCharacters(in: allowedCharacters)
+                return unwantedStr.count == 0
+            }
+        }
+        
+        return true
+    }
+}
+
 
