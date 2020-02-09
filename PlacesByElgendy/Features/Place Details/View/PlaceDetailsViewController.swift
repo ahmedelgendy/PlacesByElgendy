@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-import Kingfisher
+import AlamofireImage
 
 class PlaceDetailsViewController: UIViewController, AlertDisplayer {
 
@@ -49,14 +49,17 @@ extension PlaceDetailsViewController {
     }
     
     func setupImageView() {
-        imageView.kf.indicatorType = .activity
-        imageView.kf.indicator?.startAnimatingView()
+//        imageView.kf.indicatorType = .activity
+//        imageView.kf.indicator?.startAnimatingView()
     }
     
     func setImageView(with urlString: String) {
-        imageView.kf.indicator?.stopAnimatingView()
-        imageView.kf.setImage(with: URL(string: urlString),
-                              options: [.transition(.fade(0.5))])
+//        imageView.kf.indicator?.stopAnimatingView()
+        if let url = URL(string: urlString) {
+            imageView.af_setImage(withURL: url)
+        }
+//        kf.setImage(with: URL(string: urlString),
+//                              options: [.transition(.fade(0.5))])
     }
     
     func setupMap(lat: Double, lng: Double) {

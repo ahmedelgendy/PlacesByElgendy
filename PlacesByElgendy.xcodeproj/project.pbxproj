@@ -21,6 +21,7 @@
 		AF799E1023EEDE840014DE4C /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E0F23EEDE840014DE4C /* PlaceDetailsViewModel.swift */; };
 		AF799E1323EEE05D0014DE4C /* SearchVenusParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E1223EEE05D0014DE4C /* SearchVenusParameters.swift */; };
 		AF799E1523EEE5760014DE4C /* VenueDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF799E1423EEE5760014DE4C /* VenueDetailsResponse.swift */; };
+		AF7F66A523F04704006662A4 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F66A423F04704006662A4 /* LoadingCell.swift */; };
 		AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A13823ECB4A600748C47 /* AppDelegate.swift */; };
 		AFB6A14223ECB4AB00748C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB6A14123ECB4AB00748C47 /* Assets.xcassets */; };
 		AFB6A14D23ECB80F00748C47 /* AppStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB6A14C23ECB80F00748C47 /* AppStarter.swift */; };
@@ -54,6 +55,7 @@
 		AF799E0F23EEDE840014DE4C /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
 		AF799E1223EEE05D0014DE4C /* SearchVenusParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVenusParameters.swift; sourceTree = "<group>"; };
 		AF799E1423EEE5760014DE4C /* VenueDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsResponse.swift; sourceTree = "<group>"; };
+		AF7F66A423F04704006662A4 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		AFB6A13523ECB4A600748C47 /* PlacesByElgendy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesByElgendy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB6A13823ECB4A600748C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PlacesByElgendy/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		AFB6A14123ECB4AB00748C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				AF799E0323EEC1960014DE4C /* AlertDisplay.swift */,
+				AF7F66A423F04704006662A4 /* LoadingCell.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				AF3DE15E23ED9DA800474093 /* UIButton+setTitle.swift in Sources */,
 				AFD7359C23ED61A600A05DD9 /* FourSquareEndpoint.swift in Sources */,
 				AFD7359823ED61A600A05DD9 /* Environment.swift in Sources */,
+				AF7F66A523F04704006662A4 /* LoadingCell.swift in Sources */,
 				AFB6A13923ECB4A600748C47 /* AppDelegate.swift in Sources */,
 				AF15D27323EE03AF003157DF /* PlacesTableViewCell.swift in Sources */,
 				AF799E1523EEE5760014DE4C /* VenueDetailsResponse.swift in Sources */,
@@ -501,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -555,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

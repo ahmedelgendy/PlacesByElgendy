@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PlacesViewModelDelegate: class {
-  func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
+  func onFetchCompleted(shouldShowLoadingCell: Bool)
   func onFetchFailed(with reason: String)
 }
 
@@ -23,7 +23,6 @@ class PlacesViewModel {
     private var searchParameters: SearchVenusParameters
     private var isFetchInProgress = false
     
-    var totalItemsCount = 0
     var itemOffset = 0
     
     private var venues = [GroupItem]()
@@ -55,13 +54,12 @@ class PlacesViewModel {
                 print("total: ", value.response.totalResults)
                 self.venues.append(contentsOf: newVenues)
                 self.searchParameters.offset += newVenues.count
-                self.totalItemsCount = value.response.totalResults ?? 0
+                
                 self.isFetchInProgress = false
-                if self.searchParameters.offset > self.searchParameters.limit {
-                    let indexPathsToReload = self.calculateIndexPathsToReload(from: newVenues)
-                    self.delegate?.onFetchCompleted(with: indexPathsToReload)
+                if self.searchParameters.offset < value.response.totalResults {
+                    self.delegate?.onFetchCompleted(shouldShowLoadingCell: true)
                 } else {
-                    self.delegate?.onFetchCompleted(with: .none)
+                    self.delegate?.onFetchCompleted(shouldShowLoadingCell: false)
                 }
             }
         }
@@ -86,12 +84,6 @@ extension PlacesViewModel {
     
     func venue(at index: Int) -> Venue {
         return venues[index].venue
-    }
-    
-    fileprivate func calculateIndexPathsToReload(from newVenues: [GroupItem]) -> [IndexPath] {
-        let startIndex = venues.count - newVenues.count
-        let endIndex = startIndex + newVenues.count
-        return (startIndex..<endIndex).map { IndexPath(row: $0, section: 0) }
     }
 }
 

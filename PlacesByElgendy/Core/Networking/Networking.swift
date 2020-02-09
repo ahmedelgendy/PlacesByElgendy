@@ -30,8 +30,9 @@ public struct Networking: NetworkingProtocol {
                 
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+//                print("Before decoding: \n", String(data: data, encoding: .utf8))
                 let decodedObject = try decoder.decode(T.self, from: data)
-                
+//                print("After decoding: \n", decodedObject)
                 completion(.success(decodedObject))
             } catch {
                 completion(.failure(error))

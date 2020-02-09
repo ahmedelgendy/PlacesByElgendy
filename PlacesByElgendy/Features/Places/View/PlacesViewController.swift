@@ -15,7 +15,8 @@ class PlacesViewController: UIViewController, AlertDisplayer {
     
     private var viewModel: PlacesViewModel!
     private let cellIdentifier = "PlacesTableViewCell"
-    
+    private let LoadingCellIdentifier = "LoadingCell"
+    private var shouldShowLoadingCell = false
     init(viewModel: PlacesViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -49,33 +50,36 @@ extension PlacesViewController {
     func setupTableView() {
         let nibName = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: cellIdentifier)
-        tableView.prefetchDataSource = self
+        tableView.register(LoadingCell.self, forCellReuseIdentifier: LoadingCellIdentifier)
         tableView.isHidden = true
     }
 }
 
 
 // MARK: - UITableViewDelegate Methods
-extension PlacesViewController: UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching {
+extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.totalItemsCount
+        if shouldShowLoadingCell {
+            return viewModel.numberOfItems() + 1
+        }
+        return viewModel.numberOfItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? PlacesTableViewCell else {
-            return UITableViewCell()
-        }
+
         if isLoadingCell(for: indexPath) {
-            cell.configure(with: .none)
+            return LoadingCell(style: .default, reuseIdentifier: LoadingCellIdentifier)
         } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? PlacesTableViewCell else {
+                return   UITableViewCell()
+            }
             cell.configure(with: viewModel.venue(at: indexPath.row))
+            return cell
         }
-        return cell
     }
-    
-    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        if indexPaths.contains(where: isLoadingCell) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if isLoadingCell(for: indexPath) {
             viewModel.fetchPlaces()
         }
     }
@@ -95,15 +99,11 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource, UITa
 
 // MARK: - PlacesViewModelDelegate
 extension PlacesViewController: PlacesViewModelDelegate {
-    func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
-        guard let newIndexPathsToReload = newIndexPathsToReload else {
-            activityIndicator.stopAnimating()
-            tableView.isHidden = false
-            tableView.reloadData()
-            return
-        }
-        let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPathsToReload)
-        tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+    func onFetchCompleted(shouldShowLoadingCell: Bool) {
+        activityIndicator.stopAnimating()
+        self.shouldShowLoadingCell = shouldShowLoadingCell
+        tableView.isHidden = false
+        tableView.reloadData()
     }
     
     func onFetchFailed(with reason: String) {
@@ -118,7 +118,8 @@ extension PlacesViewController: PlacesViewModelDelegate {
 private extension PlacesViewController {
     
     func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        return indexPath.row >= viewModel.numberOfItems()
+        guard shouldShowLoadingCell else { return false }
+        return indexPath.row == viewModel.numberOfItems()
     }
     
     func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {

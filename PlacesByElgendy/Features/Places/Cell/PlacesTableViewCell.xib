@@ -37,25 +37,19 @@
                         <color key="textColor" red="0.078431372549019607" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-3w-lLI">
-                        <rect key="frame" x="136.5" y="34" width="20" height="20"/>
-                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="xf7-nY-9KH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="9zJ-s8-7mw"/>
                     <constraint firstAttribute="trailing" secondItem="wiH-FU-ZF8" secondAttribute="trailing" constant="15" id="CTf-qd-qVi"/>
-                    <constraint firstItem="q8f-3w-lLI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="H1s-QR-mpK"/>
                     <constraint firstAttribute="bottom" secondItem="AZ1-mw-hlo" secondAttribute="bottom" constant="17" id="UOy-Ev-Lul"/>
                     <constraint firstItem="wiH-FU-ZF8" firstAttribute="leading" secondItem="xf7-nY-9KH" secondAttribute="trailing" constant="8" id="kN6-ft-QDC"/>
                     <constraint firstItem="xf7-nY-9KH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mys-Ea-hAx"/>
                     <constraint firstItem="wiH-FU-ZF8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nZp-6F-TfG"/>
                     <constraint firstItem="AZ1-mw-hlo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nbL-od-fOC"/>
                     <constraint firstItem="AZ1-mw-hlo" firstAttribute="top" secondItem="xf7-nY-9KH" secondAttribute="bottom" constant="10.5" id="qdW-Ue-GZg"/>
-                    <constraint firstItem="q8f-3w-lLI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tiW-bq-b2E"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="activityIndicator" destination="q8f-3w-lLI" id="f42-K1-VYg"/>
                 <outlet property="addressLabel" destination="AZ1-mw-hlo" id="si0-Xa-37V"/>
                 <outlet property="placeNameLabel" destination="xf7-nY-9KH" id="hqa-WP-kny"/>
             </connections>
